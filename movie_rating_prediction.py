@@ -32,6 +32,6 @@ if st.button('Predict'):
     'Director': [director]
 })
     x = model.predict(features)
-    prediction = "{:.2f}".format(x)
+    prediction = "{:.2f}".format(x[0])
     
-    st.write(f'Predicted Success: {prediction[0]}')
+    st.write(f'Predicted Success: {prediction}')
